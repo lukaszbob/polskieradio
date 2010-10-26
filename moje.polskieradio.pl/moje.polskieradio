@@ -1,0 +1,43 @@
+#!/bin/bash
+
+stream_url[0]="rtmp://stream85.polskieradio.pl/omniaaxe/k34.stream"
+stream_name[0]="minimax"
+stream_url[1]="rtmp://stream85.polskieradio.pl/omniaaxe/k41.stream"
+stream_name[1]="classic_rock"
+stream_url[2]="rtmp://stream85.polskieradio.pl/omniaaxe/k42.stream"
+stream_name[2]="prog_rock"
+
+
+usage()
+{
+	echo "Usage: $0 [stream_to_play]"
+	echo
+	echo "Known streams are:"
+	for i in $(seq 0 $((${#stream_name[*]}-1))); do
+		echo "  o ${stream_name[$i]}"
+	done;
+
+}
+
+if [ "$1" == "" ] || [ $# != 1 ]; then
+	usage
+	exit;
+fi
+
+for i in $(seq 0 $((${#stream_name[*]}-1))); do
+	if [ "${stream_name[$i]}" == "$1" ]; then
+		STREAM_URL="${stream_url[$i]}"
+		break;
+	fi;
+done;
+
+if [ "$STREAM_URL" == "" ]; then
+	usage
+	exit
+fi;
+
+
+while true; do
+	rtmpdump --timeout 7 --rtmp "$STREAM_URL" | mplayer -
+	sleep 1;
+done

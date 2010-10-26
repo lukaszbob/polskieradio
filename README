@@ -1,2 +1,5 @@
 Just some trivial scripts. They simplify listening to audio streams
-from polskieradio.pl.
+from polskieradio.pl under linux. Requirements:
+
+  o mplayer - everything needs this
+  o rtmpdump - for moje.polskieradio.pl
