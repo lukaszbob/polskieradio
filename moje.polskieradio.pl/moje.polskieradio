@@ -6,7 +6,38 @@ stream_url[1]="rtmp://stream85.polskieradio.pl/omniaaxe/k41.stream"
 stream_name[1]="classic_rock"
 stream_url[2]="rtmp://stream85.polskieradio.pl/omniaaxe/k42.stream"
 stream_name[2]="prog_rock"
-
+stream_url[3]="rtmp://stream85.polskieradio.pl/omniaaxe/k26.stream"
+stream_name[3]="opener"
+stream_url[4]="rtmp://stream85.polskieradio.pl/omniaaxe/k20.stream"
+stream_name[4]="mann_niedzwiedz"
+stream_url[5]="rtmp://stream85.polskieradio.pl/omniaaxe/k50.stream"
+stream_name[5]="city_groove"
+stream_url[6]="rtmp://stream85.polskieradio.pl/omniaaxe/k45.stream"
+stream_name[6]="led_zeppelin"
+stream_url[7]="rtmp://stream85.polskieradio.pl/omniaaxe/k44.stream"
+stream_name[7]="prl"
+stream_url[8]="rtmp://stream85.polskieradio.pl/omniaaxe/k35.stream"
+stream_name[8]="offensywa"
+stream_url[9]="rtmp://stream85.polskieradio.pl/omniaaxe/k29.stream"
+stream_name[9]="indie"
+stream_url[10]="rtmp://stream85.polskieradio.pl/omniaaxe/k28.stream"
+stream_name[10]="modern_rock"
+stream_url[11]="rtmp://stream85.polskieradio.pl/omniaaxe/k23.stream"
+stream_name[11]="jazz"
+stream_url[12]="rtmp://stream85.polskieradio.pl/omniaaxe/k21.stream"
+stream_name[12]="polskie"
+stream_url[13]="rtmp://stream85.polskieradio.pl/omniaaxe/k27.stream"
+stream_name[13]="rnb"
+stream_url[14]="rtmp://stream85.polskieradio.pl/omniaaxe/k30.stream"
+stream_name[14]="reggae"
+stream_url[15]="rtmp://stream85.polskieradio.pl/omniaaxe/k43.stream"
+stream_name[15]="blues_brothers"
+stream_url[16]="rtmp://stream85.polskieradio.pl/omniaaxe/k16.stream"
+stream_name[16]="koncerty"
+stream_url[17]="rtmp://stream85.polskieradio.pl/omniaaxe/k18.stream"
+stream_name[17]="rozrywka"
+stream_url[18]="rtmp://stream85.polskieradio.pl/omniaaxe/k47.stream"
+stream_name[18]="pop"
 
 usage()
 {
@@ -36,8 +67,9 @@ if [ "$STREAM_URL" == "" ]; then
 	exit
 fi;
 
-
-while true; do
-	rtmpdump --timeout 7 --rtmp "$STREAM_URL" | mplayer -
+	mkfifo /tmp/radio
+	rtmpdump --timeout 7 --rtmp "$STREAM_URL" --live  -o /tmp/radio 2> /dev/null &
 	sleep 1;
-done
+	mplayer /tmp/radio
+	killall rtmpdump
+	rm /tmp/radio
