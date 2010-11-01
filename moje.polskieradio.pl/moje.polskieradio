@@ -70,6 +70,6 @@ fi;
 	mkfifo /tmp/radio
 	rtmpdump --timeout 7 --rtmp "$STREAM_URL" --live  -o /tmp/radio 2> /dev/null &
 	sleep 1;
-	mplayer /tmp/radio
+	mplayer /tmp/radio -novideo
 	killall rtmpdump
 	rm /tmp/radio
