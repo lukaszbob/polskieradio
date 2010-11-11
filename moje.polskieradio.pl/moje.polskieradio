@@ -1,43 +1,47 @@
 #!/bin/bash
+stream_url_p1="rtmp://stream85.polskieradio.pl/omniaaxe/k"
+stream_url_p2=".stream"
 
-stream_url[0]="rtmp://stream85.polskieradio.pl/omniaaxe/k34.stream"
+stream_number[0]=34
 stream_name[0]="minimax"
-stream_url[1]="rtmp://stream85.polskieradio.pl/omniaaxe/k41.stream"
+stream_number[1]=41
 stream_name[1]="classic_rock"
-stream_url[2]="rtmp://stream85.polskieradio.pl/omniaaxe/k42.stream"
+stream_number[2]=42
 stream_name[2]="prog_rock"
-stream_url[3]="rtmp://stream85.polskieradio.pl/omniaaxe/k26.stream"
+stream_number[3]=26
 stream_name[3]="opener"
-stream_url[4]="rtmp://stream85.polskieradio.pl/omniaaxe/k20.stream"
+stream_number[4]=20
 stream_name[4]="mann_niedzwiedz"
-stream_url[5]="rtmp://stream85.polskieradio.pl/omniaaxe/k50.stream"
+stream_number[5]=50
 stream_name[5]="city_groove"
-stream_url[6]="rtmp://stream85.polskieradio.pl/omniaaxe/k45.stream"
+stream_number[6]=45
 stream_name[6]="led_zeppelin"
-stream_url[7]="rtmp://stream85.polskieradio.pl/omniaaxe/k44.stream"
+stream_number[7]=44
 stream_name[7]="prl"
-stream_url[8]="rtmp://stream85.polskieradio.pl/omniaaxe/k35.stream"
+stream_number[8]=35
 stream_name[8]="offensywa"
-stream_url[9]="rtmp://stream85.polskieradio.pl/omniaaxe/k29.stream"
+stream_number[9]=29
 stream_name[9]="indie"
-stream_url[10]="rtmp://stream85.polskieradio.pl/omniaaxe/k28.stream"
+stream_number[10]=28
 stream_name[10]="modern_rock"
-stream_url[11]="rtmp://stream85.polskieradio.pl/omniaaxe/k23.stream"
+stream_number[11]=23
 stream_name[11]="jazz"
-stream_url[12]="rtmp://stream85.polskieradio.pl/omniaaxe/k21.stream"
+stream_number[12]=21
 stream_name[12]="polskie"
-stream_url[13]="rtmp://stream85.polskieradio.pl/omniaaxe/k27.stream"
+stream_number[13]=27
 stream_name[13]="rnb"
-stream_url[14]="rtmp://stream85.polskieradio.pl/omniaaxe/k30.stream"
+stream_number[14]=30
 stream_name[14]="reggae"
-stream_url[15]="rtmp://stream85.polskieradio.pl/omniaaxe/k43.stream"
+stream_number[15]=43
 stream_name[15]="blues_brothers"
-stream_url[16]="rtmp://stream85.polskieradio.pl/omniaaxe/k16.stream"
+stream_number[16]=16
 stream_name[16]="koncerty"
-stream_url[17]="rtmp://stream85.polskieradio.pl/omniaaxe/k18.stream"
+stream_number[17]=18
 stream_name[17]="rozrywka"
-stream_url[18]="rtmp://stream85.polskieradio.pl/omniaaxe/k47.stream"
+stream_number[18]=47
 stream_name[18]="pop"
+
+default_stream=1
 
 usage()
 {
@@ -52,12 +56,12 @@ usage()
 
 if [ "$1" == "" ] || [ $# != 1 ]; then
 	usage
-	exit;
+	exit
 fi
 
 for i in $(seq 0 $((${#stream_name[*]}-1))); do
 	if [ "${stream_name[$i]}" == "$1" ]; then
-		STREAM_URL="${stream_url[$i]}"
+		STREAM_URL="$stream_url_p1${stream_number[$i]}$stream_url_p2"
 		break;
 	fi;
 done;
@@ -66,7 +70,7 @@ if [ "$STREAM_URL" == "" ]; then
 	usage
 	exit
 fi;
-
+	echo "Playing stream $1"
 	mkfifo /tmp/radio
 	rtmpdump --timeout 7 --rtmp "$STREAM_URL" --live  -o /tmp/radio 2> /dev/null &
 	sleep 1;
