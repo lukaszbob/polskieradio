@@ -1,6 +1,8 @@
 #!/bin/bash
-stream_url_p1="rtmp://stream85.polskieradio.pl/omniaaxe/k"
-stream_url_p2=".stream"
+moje_url_p1="rtmp://stream85.polskieradio.pl/omniaaxe/k"
+moje_url_p2=".stream"
+
+regular_station_url="http://stream.polskieradio.pl/program"
 
 stream_number[0]=34
 stream_name[0]="minimax"
@@ -41,16 +43,27 @@ stream_name[17]="rozrywka"
 stream_number[18]=47
 stream_name[18]="pop"
 
-default_stream=1
+station_name[0]="jedynka"
+station_name[1]="dwojka"
+station_name[2]="trojka"
+station_name[3]="euro"
+
+stream_type="0";
 
 usage()
 {
 	echo "Usage: $0 [stream_to_play]"
 	echo
-	echo "Known streams are:"
+	echo "Moje.polskieradio.pl streams are:"
 	for i in $(seq 0 $((${#stream_name[*]}-1))); do
 		echo "  o ${stream_name[$i]}"
 	done;
+	echo
+	echo "Regular stations are:"
+	for i in $(seq 0 $((${#station_name[*]}-1))); do
+		echo "  o ${station_name[$i]}"
+	done;
+
 
 }
 
@@ -61,15 +74,28 @@ fi
 
 for i in $(seq 0 $((${#stream_name[*]}-1))); do
 	if [ "${stream_name[$i]}" == "$1" ]; then
-		STREAM_URL="$stream_url_p1${stream_number[$i]}$stream_url_p2"
+		STREAM_URL="$moje_url_p1${stream_number[$i]}$moje_url_p2";
+		streamtype="1";
 		break;
 	fi;
 done;
 
 if [ "$STREAM_URL" == "" ]; then
+	for i in $(seq 0 $((${#station_name[*]}-1))); do
+		if [ "${station_name[$i]}" == "$1" ]; then
+			STREAM_URL="$regular_station_url$((i + 1))";
+			streamtype="2";
+		break;
+	fi;
+	done;
+fi;
+
+if [ "$STREAM_URL" == "" ]; then
 	usage
 	exit
 fi;
+
+if [ "$streamtype" == "1" ]; then
 	echo "Playing stream $1"
 	mkfifo /tmp/radio
 	rtmpdump --timeout 7 --rtmp "$STREAM_URL" --live  -o /tmp/radio 2> /dev/null &
@@ -77,3 +103,9 @@ fi;
 	mplayer /tmp/radio -novideo
 	killall rtmpdump
 	rm /tmp/radio
+fi;
+if [ "$streamtype" == "2" ]; then
+	echo "Playing stream $1"
+	mplayer -novideo -cache 128 -cache-min 70 "$STREAM_URL"
+fi;
+
