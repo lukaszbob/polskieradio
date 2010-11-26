@@ -241,7 +241,7 @@ station_name[3]="czworka"
 
 usage()
 {
-	echo "Usage: $0 [music_stream_to_play]"
+	echo "Usage: $0 [stream_to_play]"
 	echo
 	echo "Moje.polskieradio.pl music streams are:"
 	for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
@@ -305,7 +305,7 @@ fi;
 if [ "$stream_URL" == "" ]; then
 	for i in $(seq 0 $((${#station_name[*]}-1))); do
 		if [ "${station_name[$i]}" == "$1" ]; then
-			music_stream_URL="$regular_station_url$((i + 1))";
+			stream_URL="$regular_station_url$((i + 1))";
 			streamtype="2";
 		break;
 	fi;
