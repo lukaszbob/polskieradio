@@ -4,61 +4,273 @@ moje_url_p2=".stream"
 
 regular_station_url="http://stream.polskieradio.pl/program"
 
-stream_number[0]=34
-stream_name[0]="minimax"
-stream_number[1]=41
-stream_name[1]="classic_rock"
-stream_number[2]=42
-stream_name[2]="prog_rock"
-stream_number[3]=26
-stream_name[3]="opener"
-stream_number[4]=20
-stream_name[4]="mann_niedzwiedz"
-stream_number[5]=50
-stream_name[5]="city_groove"
-stream_number[6]=45
-stream_name[6]="led_zeppelin"
-stream_number[7]=44
-stream_name[7]="prl"
-stream_number[8]=35
-stream_name[8]="offensywa"
-stream_number[9]=29
-stream_name[9]="indie"
-stream_number[10]=28
-stream_name[10]="modern_rock"
-stream_number[11]=23
-stream_name[11]="jazz"
-stream_number[12]=21
-stream_name[12]="polskie"
-stream_number[13]=27
-stream_name[13]="rnb"
-stream_number[14]=30
-stream_name[14]="reggae"
-stream_number[15]=43
-stream_name[15]="blues_brothers"
-stream_number[16]=16
-stream_name[16]="koncerty"
-stream_number[17]=18
-stream_name[17]="rozrywka"
-stream_number[18]=47
-stream_name[18]="pop"
+music_stream_number[0]=16
+music_stream_name[0]="koncerty"
+music_stream_desc[0]="Koncerty w Trójce"
+
+music_stream_number[1]=19
+music_stream_name[1]="wywiady_nd"
+music_stream_desc[1]="Wywiady Marka Niedźwieckiego"
+
+music_stream_number[2]=20
+music_stream_name[2]="mann_niedzwiedz"
+music_stream_desc[2]="Wojciech Mann i Marek Niedźwiecki"
+
+music_stream_number[3]=21
+music_stream_name[3]="polskie"
+music_stream_desc[3]="Najpiękniejsze polskie piosenki"
+
+music_stream_number[4]=22
+music_stream_name[4]="chopin"
+music_stream_desc[4]="Konkurs Chopinowski"
+
+music_stream_number[5]=23
+music_stream_name[5]="jazz"
+music_stream_desc[5]="W jazzowym klimacie"
+
+music_stream_number[6]=24
+music_stream_name[6]="lato"
+music_stream_desc[6]="Przeboje Lata z Radiem"
+
+music_stream_number[7]=25
+music_stream_name[7]="alt_pop"
+music_stream_desc[7]="ALT + POP +SYNTH"
+
+music_stream_number[8]=26
+music_stream_name[8]="opener"
+music_stream_desc[8]="Opener Festival"
+
+music_stream_number[9]=27
+music_stream_name[9]="rnb"
+music_stream_desc[9]="RnB"
+
+music_stream_number[10]=28
+music_stream_name[10]="modern_rock"
+music_stream_desc[10]="Modern rock"
+
+music_stream_number[11]=29
+music_stream_name[11]="indie"
+music_stream_desc[11]="Indie"
+
+music_stream_number[12]=30
+music_stream_name[12]="reggae"
+music_stream_desc[12]="REGGAE + DANCEHALL + HIPHOP"
+
+music_stream_number[13]=33
+music_stream_name[13]="paryz"
+music_stream_desc[13]="Pod dachami Paryża"
+
+music_stream_number[14]=34
+music_stream_name[14]="minimax"
+music_stream_desc[14]="Minimax"
+
+music_stream_number[15]=35
+music_stream_name[15]="offensywa"
+music_stream_desc[15]="OFFENSYWA"
+
+music_stream_number[16]=41
+music_stream_name[16]="classic_rock"
+music_stream_desc[16]="Classic Rock"
+
+music_stream_number[17]=42
+music_stream_name[17]="prog_rock"
+music_stream_desc[17]="Prog Rock"
+
+music_stream_number[18]=43
+music_stream_name[18]="blues_brothers"
+music_stream_desc[18]="Blues Brothers"
+
+music_stream_number[19]=44
+music_stream_name[19]="prl"
+music_stream_desc[19]="Przeboje PRL"
+
+music_stream_number[20]=45
+music_stream_name[20]="led_zeppelin"
+music_stream_desc[20]="Led Zeppelin"
+
+music_stream_number[21]=46
+music_stream_name[21]="ambient"
+music_stream_desc[21]="Ambient $ Industrial"
+
+music_stream_number[22]=47
+music_stream_name[22]="pop"
+music_stream_desc[22]="Smooth Pop"
+
+music_stream_number[23]=48
+music_stream_name[23]="ballady"
+music_stream_desc[23]="Ballady"
+
+music_stream_number[24]=49
+music_stream_name[24]="poranki"
+music_stream_desc[24]="Poranki Muzyczne"
+
+music_stream_number[25]=50
+music_stream_name[25]="city_groove"
+music_stream_desc[25]="City Groove"
+
+music_stream_number[26]=66
+music_stream_name[26]="sting"
+music_stream_desc[26]="Sting"
+
+music_stream_number[27]=67
+music_stream_name[27]="blues"
+music_stream_desc[27]="W bluesowym klimacie"
+
+music_stream_number[28]=69
+music_stream_name[28]="nostalgia"
+music_stream_desc[28]="Nostalgia"
+
+music_stream_number[29]=71
+music_stream_name[29]="szanty"
+music_stream_desc[29]="Szanty"
+
+music_stream_number[30]=72
+music_stream_name[30]="grunge"
+music_stream_desc[30]="Grunge"
+
+music_stream_number[31]=73
+music_stream_name[31]="mloda_polska"
+music_stream_desc[31]="Młoda Polska"
+
+music_stream_number[32]=77
+music_stream_name[32]="siesta"
+music_stream_desc[32]="Siesta"
+
+music_stream_number[33]=78
+music_stream_name[33]="alternatywny"
+music_stream_desc[33]="Program alternatywny"
+
+music_stream_number[34]=79
+music_stream_name[34]="wywiady_ps"
+music_stream_desc[34]="Wywiady Piotra Stelmacha"
+
+music_stream_number[35]=80
+music_stream_name[35]="pasmo"
+music_stream_desc[35]="Potrójne Pasmo Przenoszenia"
+
+
+word_stream_number[0]=11
+word_stream_name[0]="zabawy"
+word_stream_desc[0]="Zabawy z językiem"
+
+word_stream_number[1]=12
+word_stream_name[1]="portret"
+word_stream_desc[1]="Portret słowem malowany"
+
+word_stream_number[2]=13
+word_stream_name[2]="freud"
+word_stream_desc[2]="Radio Freud"
+
+word_stream_number[3]=14
+word_stream_name[3]="zapiski"
+word_stream_desc[3]="Zapiski ze współczesności"
+
+word_stream_number[4]=15
+word_stream_name[4]="kosmos"
+word_stream_desc[4]="Kosmos"
+
+word_stream_number[5]=17
+word_stream_name[5]="reportaz"
+word_stream_desc[5]="Reportaż w Trójce"
+
+word_stream_number[6]=18
+word_stream_name[6]="rozrywka"
+word_stream_desc[6]="Rozrywka w Trójce"
+
+word_stream_number[7]=31
+word_stream_name[7]="pani_magdo"
+word_stream_desc[7]="Pani Magdo, pani pierwszej to powiem"
+
+word_stream_number[8]=32
+word_stream_name[8]="tym_zyl"
+word_stream_desc[8]="Tym żył świat"
+
+word_stream_number[9]=36
+word_stream_name[9]="wankowicz"
+word_stream_desc[9]="Wańkowicz krzepi"
+
+word_stream_number[10]=37
+word_stream_name[10]="bajki"
+word_stream_desc[10]="Bajki samograjki"
+
+word_stream_number[11]=38
+word_stream_name[11]="w_roli"
+word_stream_desc[11]="W roli głównej"
+
+word_stream_number[12]=39
+word_stream_name[12]="7_dni"
+word_stream_desc[12]="7 dni w kraju i na świecie"
+
+word_stream_number[13]=40
+word_stream_name[13]="lwow"
+word_stream_desc[13]="Lwów. Krajobrazy serdeczne"
+
+word_stream_number[14]=52
+word_stream_name[14]="historia"
+word_stream_desc[14]="Historia najnowsza"
+
+word_stream_number[15]=60
+word_stream_name[15]="zdrowiej"
+word_stream_desc[15]="Z Jedynką zdrowiej"
+
+word_stream_number[16]=61
+word_stream_name[16]="drogi"
+word_stream_desc[16]="Drogi do Niepodległej - 1918"
+
+word_stream_number[17]=62
+word_stream_name[17]="wieczor_odkrywcow"
+word_stream_desc[17]="Wieczór odkrywców"
+
+word_stream_number[18]=65
+word_stream_name[18]="studio_reporatzu"
+word_stream_desc[18]="Studio Reportażu"
+
+word_stream_number[19]=68
+word_stream_name[19]="archeologia"
+word_stream_desc[19]="Archeologia"
+
+word_stream_number[20]=85
+word_stream_name[20]="rok_wojny"
+word_stream_desc[20]="Rok wojny, rok pokoju - 1945"
 
 station_name[0]="jedynka"
 station_name[1]="dwojka"
 station_name[2]="trojka"
-station_name[3]="euro"
+station_name[3]="czworka"
 
-stream_type="0";
 
 usage()
 {
-	echo "Usage: $0 [stream_to_play]"
+	echo "Usage: $0 [music_stream_to_play]"
 	echo
-	echo "Moje.polskieradio.pl streams are:"
-	for i in $(seq 0 $((${#stream_name[*]}-1))); do
-		echo "  o ${stream_name[$i]}"
+	echo "Moje.polskieradio.pl music streams are:"
+	for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
+		echo -n "  o ${music_stream_name[$i]}"
+		
+		if [ ${#music_stream_name[$i]} -gt  10 ]
+			then
+				echo -ne " \t "
+			else
+				echo -ne " \t \t "
+		fi
+		echo "${music_stream_desc[$i]}"
 	done;
 	echo
+
+	echo "Moje.polskieradio.pl ''word'' streams are:"
+	for i in $(seq 0 $((${#word_stream_name[*]}-1))); do
+		echo -n "  o ${word_stream_name[$i]}"
+		
+		if [ ${#word_stream_name[$i]} -gt  10 ]
+			then
+				echo -ne " \t "
+			else
+				echo -ne " \t \t "
+		fi
+		echo "${word_stream_desc[$i]}"
+	done;
+	echo
+
 	echo "Regular stations are:"
 	for i in $(seq 0 $((${#station_name[*]}-1))); do
 		echo "  o ${station_name[$i]}"
@@ -72,25 +284,35 @@ if [ "$1" == "" ] || [ $# != 1 ]; then
 	exit
 fi
 
-for i in $(seq 0 $((${#stream_name[*]}-1))); do
-	if [ "${stream_name[$i]}" == "$1" ]; then
-		STREAM_URL="$moje_url_p1${stream_number[$i]}$moje_url_p2";
+for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
+	if [ "${music_stream_name[$i]}" == "$1" ]; then
+		stream_URL="$moje_url_p1${music_stream_number[$i]}$moje_url_p2";
 		streamtype="1";
 		break;
 	fi;
 done;
 
-if [ "$STREAM_URL" == "" ]; then
+if [ "$stream_URL" == "" ]; then
+	for i in $(seq 0 $((${#word_stream_name[*]}-1))); do
+		if [ "${word_stream_name[$i]}" == "$1" ]; then
+			stream_URL="$moje_url_p1${word_stream_number[$i]}$moje_url_p2";
+			streamtype="1";
+			break;
+		fi;
+	done;
+fi;
+
+if [ "$stream_URL" == "" ]; then
 	for i in $(seq 0 $((${#station_name[*]}-1))); do
 		if [ "${station_name[$i]}" == "$1" ]; then
-			STREAM_URL="$regular_station_url$((i + 1))";
+			music_stream_URL="$regular_station_url$((i + 1))";
 			streamtype="2";
 		break;
 	fi;
 	done;
 fi;
 
-if [ "$STREAM_URL" == "" ]; then
+if [ "$stream_URL" == "" ]; then
 	usage
 	exit
 fi;
@@ -98,7 +320,7 @@ fi;
 if [ "$streamtype" == "1" ]; then
 	echo "Playing stream $1"
 	mkfifo /tmp/radio
-	rtmpdump --timeout 7 --rtmp "$STREAM_URL" --live  -o /tmp/radio 2> /dev/null &
+	rtmpdump --timeout 7 --rtmp "$stream_URL" --live  -o /tmp/radio 2> /dev/null &
 	sleep 1;
 	mplayer /tmp/radio -novideo
 	killall rtmpdump
@@ -106,6 +328,6 @@ if [ "$streamtype" == "1" ]; then
 fi;
 if [ "$streamtype" == "2" ]; then
 	echo "Playing stream $1"
-	mplayer -novideo -cache 128 -cache-min 70 "$STREAM_URL"
+	mplayer -novideo -cache 128 -cache-min 70 "$stream_URL"
 fi;
 
