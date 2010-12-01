@@ -221,17 +221,29 @@ word_stream_number[17]=62
 word_stream_name[17]="wieczor_odkrywcow"
 word_stream_desc[17]="Wieczór odkrywców"
 
-word_stream_number[18]=65
-word_stream_name[18]="studio_reporatzu"
-word_stream_desc[18]="Studio Reportażu"
+word_stream_number[18]=63
+word_stream_name[18]="spotkanie"
+word_stream_desc[18]="Spotkanie z mistrzem"
 
-word_stream_number[19]=68
-word_stream_name[19]="archeologia"
-word_stream_desc[19]="Archeologia"
+word_stream_number[19]=64
+word_stream_name[19]="przezyjmy"
+word_stream_desc[19]="Przeżyjmy to jeszcze raz"
 
-word_stream_number[20]=85
-word_stream_name[20]="rok_wojny"
-word_stream_desc[20]="Rok wojny, rok pokoju - 1945"
+word_stream_number[20]=65
+word_stream_name[20]="studio_reporatzu"
+word_stream_desc[20]="Studio Reportażu"
+
+word_stream_number[21]=68
+word_stream_name[21]="archeologia"
+word_stream_desc[21]="Archeologia"
+
+word_stream_number[22]=83
+word_stream_name[22]="rok_pokoju"
+word_stream_desc[22]="1939 - Rok pokoju, rok wojny"
+
+word_stream_number[23]=85
+word_stream_name[23]="rok_wojny"
+word_stream_desc[23]="Rok wojny, rok pokoju - 1945"
 
 station_name[0]="jedynka"
 station_name[1]="dwojka"
