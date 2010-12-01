@@ -3,3 +3,13 @@ from polskieradio.pl under linux. Requirements:
 
   o mplayer - everything needs this
   o rtmpdump - for moje.polskieradio.pl
+
+mplayer:
+o project page: http://www.mplayerhq.hu/
+o I'm pretty sure, that mplayer is in your distro or your distro repositories
+o so, in Ubuntu type: "sudo apt-get install mplayer"
+
+rtmpdump:
+o project page: http://rtmpdump.mplayerhq.hu/
+o something about rtmpdump: http://rtmpdump.mplayerhq.hu/
+o deb binaries: http://debian-multimedia.org/pool/main/r/rtmpdump/rtmpdump.php
