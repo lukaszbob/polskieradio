@@ -1,0 +1,45 @@
+list-music-streams(){
+	for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
+		echo -n "  o ${music_stream_name[$i]}"
+		
+		if [ ${#music_stream_name[$i]} -gt  10 ]
+			then
+				echo -ne " \t "
+			else
+				echo -ne " \t \t "
+		fi
+		echo "${music_stream_desc[$i]}"
+	done;
+}
+
+list-word-streams(){
+	echo "Moje.polskieradio.pl ''word'' streams are:"
+	for i in $(seq 0 $((${#word_stream_name[*]}-1))); do
+		echo -n "  o ${word_stream_name[$i]}"
+		
+		if [ ${#word_stream_name[$i]} -gt  10 ]
+			then
+				echo -ne " \t "
+			else
+				echo -ne " \t \t "
+		fi
+		echo "${word_stream_desc[$i]}"
+	done;
+	echo
+}
+
+list-regular-stations(){
+	echo "Regular stations are:"
+	for i in $(seq 0 $((${#station_name[*]}-1))); do
+		echo "  o ${station_name[$i]}"
+	done;
+}
+
+get-music-stream-by-name(){
+    for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
+        if [ "${music_stream_name[$i]}" == "$1" ]; then
+            echo $i
+        fi;
+    done;
+}
+

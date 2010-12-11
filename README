@@ -3,6 +3,8 @@ from polskieradio.pl under linux. Requirements:
 
   o mplayer - everything needs this
   o rtmpdump - for moje.polskieradio.pl
+  o curl - for program_name
+  o python - for running Makefile (and make, of course)
 
 mplayer:
 o project page: http://www.mplayerhq.hu/

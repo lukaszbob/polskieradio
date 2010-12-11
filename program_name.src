@@ -1,0 +1,30 @@
+#!/bin/bash -x
+
+DESC_URL_BASE='http://moje.polskieradio.pl/StationDetails.aspx?id='
+
+# Load streams
+. streams
+
+# Load library
+. library
+
+usage(){
+    echo "Usage: $0 [music_stream]"
+    echo
+    list-music-streams
+}
+
+if [ "$1" == "" ] || [ $# != 1 ]; then
+    usage
+    exit 1
+fi
+
+MUSIC_STREAM=$(get-music-stream-by-name "$1")
+#TODO This is not yet implemented in streams db
+STREAM_NUMBER=${music_stream_number[$MUSIC_STREAM]}
+
+DESC_URL="$DESC_URL_BASE$STREAM_NUMBER"
+
+
+curl -s "$DESC_URL" | sed -ne 's%[ ]*<span id="EventDetails1_lblTitle" class="title">\(.*\)</span>%\1%gp'
+

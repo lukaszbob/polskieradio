@@ -1,0 +1,74 @@
+#!/bin/bash
+moje_url_p1="rtmp://stream85.polskieradio.pl/omniaaxe/k"
+moje_url_p2=".stream"
+
+regular_station_url="http://stream.polskieradio.pl/program"
+
+# Load known streams
+. streams #INCLUDE
+# Load library
+. library #INCLUDE
+
+usage()
+{
+	echo "Usage: $0 [stream_to_play]"
+	echo
+    list-music-streams
+	echo
+    list-word-streams
+	echo
+    list-regular-stations
+}
+
+if [ "$1" == "" ] || [ $# != 1 ]; then
+	usage
+	exit 1
+fi
+
+for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
+	if [ "${music_stream_name[$i]}" == "$1" ]; then
+		stream_URL="$moje_url_p1${music_stream_number[$i]}$moje_url_p2";
+		streamtype="1";
+		break;
+	fi;
+done;
+
+if [ "$stream_URL" == "" ]; then
+	for i in $(seq 0 $((${#word_stream_name[*]}-1))); do
+		if [ "${word_stream_name[$i]}" == "$1" ]; then
+			stream_URL="$moje_url_p1${word_stream_number[$i]}$moje_url_p2";
+			streamtype="1";
+			break;
+		fi;
+	done;
+fi;
+
+if [ "$stream_URL" == "" ]; then
+	for i in $(seq 0 $((${#station_name[*]}-1))); do
+		if [ "${station_name[$i]}" == "$1" ]; then
+			stream_URL="$regular_station_url$((i + 1))";
+			streamtype="2";
+		break;
+	fi;
+	done;
+fi;
+
+if [ "$stream_URL" == "" ]; then
+	usage
+	exit
+fi;
+
+if [ "$streamtype" == "1" ]; then
+	echo "Playing stream $1"
+	mkfifo /tmp/radio
+	rtmpdump --timeout 7 --rtmp "$stream_URL" --live  -o /tmp/radio 2> /dev/null &
+	sleep 1;
+	mplayer /tmp/radio -novideo
+	killall rtmpdump
+	rm /tmp/radio
+fi;
+if [ "$streamtype" == "2" ]; then
+	echo "Playing stream $1"
+	mplayer -novideo -cache 128 -cache-min 70 "$stream_URL"
+fi;
+
