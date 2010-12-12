@@ -1,0 +1,46 @@
+#!/bin/bash -x
+
+# Load streams
+. streams #INCLUDE
+
+# Load library
+. library #INCLUDE
+
+usage(){
+    echo "Usage: $0 [music_stream]"
+    echo
+    list-music-streams
+}
+
+if [ "$1" == "" ] || [ $# != 1 ]; then
+    usage
+    exit 1
+fi
+
+
+STREAM=$1
+
+mkdir $STREAM &> /dev/null
+cd $STREAM
+
+while true; do
+    PROGRAM_NAME="$(../program_name $STREAM)"
+    mkdir "$PROGRAM_NAME" &> /dev/null
+    cd "$PROGRAM_NAME"
+    STREAM_URL="$(get-music-stream-url $STREAM)"
+    mplayer -novideo -ao pcm "$STREAM_URL" &
+    MPLAYER_PID=$!
+    ../../download_image $STREAM
+    wget "$(get-music-stream-details-url $STREAM)"
+
+    # waiting till program changes
+    while true; do
+        sleep 3
+        CURRENT_PROGRAM_NAME="$(../../program_name $STREAM)"
+        if [ "$CURRENT_PROGRAM_NAME" != "" ] && [ "$CURRENT_PROGRAM_NAME" != "$PROGRAM_NAME" ]; then
+            break;
+        fi
+    done
+    kill $MPLAYER_PID
+    cd ..
+done

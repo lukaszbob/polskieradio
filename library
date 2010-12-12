@@ -39,7 +39,27 @@ get-music-stream-by-name(){
     for i in $(seq 0 $((${#music_stream_name[*]}-1))); do
         if [ "${music_stream_name[$i]}" == "$1" ]; then
             echo $i
+            break;
         fi;
     done;
+}
+
+get-music-stream-url(){
+    moje_url_p1="rtmp://stream85.polskieradio.pl/omniaaxe/k"
+    moje_url_p2=".stream"
+    MUSIC_STREAM=$(get-music-stream-by-name $1)
+
+    echo "$moje_url_p1${music_stream_number[$MUSIC_STREAM]}$moje_url_p2"
+}
+
+get-music-stream-details-url(){
+    DETAILS_URL_BASE='http://moje.polskieradio.pl/StationDetails.aspx?id='
+    MUSIC_STREAM=$(get-music-stream-by-name "$1")
+    ID=${music_stream_id[$MUSIC_STREAM]}
+    if [ "$ID" == "" ]; then
+        echo Error: database incomplete >&2
+        exit 255
+    fi
+    echo "$DETAILS_URL_BASE$ID"
 }
 

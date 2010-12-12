@@ -19,6 +19,7 @@ fi
 
 DETAILS_URL=$(get-music-stream-details-url $1)
 
+IMAGE_URL=$(curl -s "$DETAILS_URL" | sed -ne 's%[ ]*<img id="EventDetails1_imgEvent" class="img" src="\([^"]*\)".*%http://moje.polskieradio.pl\1%gp')
 
-curl -s "$DETAILS_URL" | sed -ne 's%[ ]*<span id="EventDetails1_lblTitle" class="title">\(.*\)</span>.*%\1%gp'
+curl -o image.jpg "$IMAGE_URL"
 
