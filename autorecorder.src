@@ -23,8 +23,12 @@ STREAM=$1
 mkdir $STREAM &> /dev/null
 cd $STREAM
 
+
 while true; do
-    PROGRAM_NAME="$(../program_name $STREAM)"
+    PROGRAM_NAME=''
+    while [ "$PROGRAM_NAME" == "" ]; do
+        PROGRAM_NAME="$(../program_name $STREAM)"
+    done
     mkdir "$PROGRAM_NAME" &> /dev/null
     cd "$PROGRAM_NAME"
     STREAM_URL="$(get-music-stream-url $STREAM)"

@@ -55,7 +55,7 @@ music_stream_name[13]="paryz"
 music_stream_desc[13]="Pod dachami Paryża"
 
 music_stream_number[14]=34
-music_stream_id[14]=24
+music_stream_id[14]=33
 music_stream_name[14]="minimax"
 music_stream_desc[14]="Minimax"
 
