@@ -90,7 +90,7 @@ music_stream_desc[20]="Led Zeppelin"
 
 music_stream_number[21]=46
 music_stream_name[21]="ambient"
-music_stream_desc[21]="Ambient $ Industrial"
+music_stream_desc[21]="Ambient & Industrial"
 
 music_stream_number[22]=47
 music_stream_name[22]="pop"
@@ -140,25 +140,34 @@ music_stream_number[33]=73
 music_stream_name[33]="mloda_polska"
 music_stream_desc[33]="Młoda Polska"
 
-music_stream_number[34]=77
-music_stream_name[34]="siesta"
-music_stream_desc[34]="Siesta"
+music_stream_number[34]=76
+music_stream_name[34]="muzyka_swiata"
+music_stream_desc[34]="Muzyka Świata"
 
-music_stream_number[35]=78
-music_stream_name[35]="alternatywny"
-music_stream_desc[35]="Program alternatywny"
+music_stream_number[35]=77
+music_stream_name[35]="siesta"
+music_stream_desc[35]="Siesta"
 
-music_stream_number[36]=79
-music_stream_name[36]="wywiady_ps"
-music_stream_desc[36]="Wywiady Piotra Stelmacha"
+music_stream_number[36]=78
+music_stream_name[36]="alternatywny"
+music_stream_desc[36]="Program alternatywny"
 
-music_stream_number[37]=80
-music_stream_name[37]="pasmo"
-music_stream_desc[37]="Potrójne Pasmo Przenoszenia"
+music_stream_number[37]=79
+music_stream_name[37]="wywiady_ps"
+music_stream_desc[37]="Wywiady Piotra Stelmacha"
 
-music_stream_number[38]=81
-music_stream_name[38]="ossobliwosci"
-music_stream_desc[38]="Ossobliwości muzyczne"
+music_stream_number[38]=80
+music_stream_name[38]="pasmo"
+music_stream_desc[38]="Potrójne Pasmo Przenoszenia"
+
+music_stream_number[39]=81
+music_stream_name[39]="ossobliwosci"
+music_stream_desc[39]="Ossobliwości muzyczne"
+
+music_stream_number[40]=84
+music_stream_name[40]="nowa_tradycja"
+music_stream_desc[40]="Nowa Tradycja"
+
 
 word_stream_number[0]=11
 word_stream_name[0]="zabawy"
@@ -257,7 +266,7 @@ word_stream_name[23]="przezyjmy"
 word_stream_desc[23]="Przeżyjmy to jeszcze raz"
 
 word_stream_number[24]=65
-word_stream_name[24]="studio_reporatzu"
+word_stream_name[24]="studio_reportazu"
 word_stream_desc[24]="Studio Reportażu"
 
 word_stream_number[25]=67
