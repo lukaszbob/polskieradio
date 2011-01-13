@@ -34,7 +34,7 @@ music_stream_desc[6]="Przeboje Lata z Radiem"
 
 music_stream_number[7]=25
 music_stream_name[7]="alt_pop"
-music_stream_desc[7]="ALT + POP +SYNTH"
+music_stream_desc[7]="Alt + Pop +Synth"
 
 music_stream_number[8]=26
 music_stream_name[8]="opener"
@@ -54,7 +54,7 @@ music_stream_desc[11]="Indie"
 
 music_stream_number[12]=30
 music_stream_name[12]="reggae"
-music_stream_desc[12]="REGGAE + DANCEHALL + HIPHOP"
+music_stream_desc[12]="Reggae + Dancehall + Hip Hop"
 
 music_stream_number[13]=33
 music_stream_name[13]="paryz"
@@ -66,7 +66,7 @@ music_stream_desc[14]="Minimax"
 
 music_stream_number[15]=35
 music_stream_name[15]="offensywa"
-music_stream_desc[15]="OFFENSYWA"
+music_stream_desc[15]="Offensywa"
 
 music_stream_number[16]=41
 music_stream_name[16]="classic_rock"
@@ -108,37 +108,37 @@ music_stream_number[25]=50
 music_stream_name[25]="city_groove"
 music_stream_desc[25]="City Groove"
 
-music_stream_number[26]=57
-music_stream_name[26]="koledy"
-music_stream_desc[26]="Polskie kolędy"
+music_stream_number[26]=59
+music_stream_name[26]="kino"
+music_stream_desc[26]="W tonacji kina"
 
-music_stream_number[27]=58
-music_stream_name[27]="swieta"
-music_stream_desc[27]="Piosenki świąteczne"
+music_stream_number[27]=66
+music_stream_name[27]="sting"
+music_stream_desc[27]="Sting"
 
-music_stream_number[28]=66
-music_stream_name[28]="sting"
-music_stream_desc[28]="Sting"
+music_stream_number[28]=67
+music_stream_name[28]="blues"
+music_stream_desc[28]="W bluesowym klimacie"
 
-music_stream_number[29]=67
-music_stream_name[29]="blues"
-music_stream_desc[29]="W bluesowym klimacie"
+music_stream_number[29]=69
+music_stream_name[29]="nostalgia"
+music_stream_desc[29]="Nostalgia"
 
-music_stream_number[30]=69
-music_stream_name[30]="nostalgia"
-music_stream_desc[30]="Nostalgia"
+music_stream_number[30]=71
+music_stream_name[30]="szanty"
+music_stream_desc[30]="Szanty"
 
-music_stream_number[31]=71
-music_stream_name[31]="szanty"
-music_stream_desc[31]="Szanty"
+music_stream_number[31]=72
+music_stream_name[31]="grunge"
+music_stream_desc[31]="Grunge"
 
-music_stream_number[32]=72
-music_stream_name[32]="grunge"
-music_stream_desc[32]="Grunge"
+music_stream_number[32]=73
+music_stream_name[32]="mloda_polska"
+music_stream_desc[32]="Młoda Polska"
 
-music_stream_number[33]=73
-music_stream_name[33]="mloda_polska"
-music_stream_desc[33]="Młoda Polska"
+music_stream_number[33]=75
+music_stream_name[33]="las"
+music_stream_desc[33]="Las"
 
 music_stream_number[34]=76
 music_stream_name[34]="muzyka_swiata"
@@ -164,10 +164,33 @@ music_stream_number[39]=81
 music_stream_name[39]="ossobliwosci"
 music_stream_desc[39]="Ossobliwości muzyczne"
 
-music_stream_number[40]=84
-music_stream_name[40]="nowa_tradycja"
-music_stream_desc[40]="Nowa Tradycja"
+music_stream_number[40]=82
+music_stream_name[40]="leniwa_niedziela"
+music_stream_desc[40]="Leniwa niedziela z Jedynką"
 
+music_stream_number[41]=84
+music_stream_name[41]="nowa_tradycja"
+music_stream_desc[41]="Nowa Tradycja"
+
+music_stream_number[42]=87
+music_stream_name[42]="chopinisci"
+music_stream_desc[42]="Najwybitniejsci polscy chopiniści"
+
+music_stream_number[43]=88
+music_stream_name[43]="gh"
+music_stream_desc[43]="GH+"
+
+music_stream_number[44]=89
+music_stream_name[44]="polski_top"
+music_stream_desc[44]="Polski top Wszech Czasów"
+
+music_stream_number[45]=90
+music_stream_name[45]="muzyka_zrodel"
+music_stream_desc[45]="Muzyka Źródeł"
+
+music_stream_number[46]=91
+music_stream_name[46]="glosy"
+music_stream_desc[46]="Słynne głosy i wielkie interpretacje"
 
 word_stream_number[0]=11
 word_stream_name[0]="zabawy"
@@ -213,17 +236,17 @@ word_stream_number[10]=37
 word_stream_name[10]="bajki"
 word_stream_desc[10]="Bajki samograjki"
 
-word_stream_number[11]=38
-word_stream_name[11]="w_roli"
-word_stream_desc[11]="W roli głównej"
+word_stream_number[11]=39
+word_stream_name[11]="7_dni"
+word_stream_desc[11]="7 dni w kraju i na świecie"
 
-word_stream_number[12]=39
-word_stream_name[12]="7_dni"
-word_stream_desc[12]="7 dni w kraju i na świecie"
+word_stream_number[12]=40
+word_stream_name[12]="lwow"
+word_stream_desc[12]="Lwów. Krajobrazy serdeczne"
 
-word_stream_number[13]=40
-word_stream_name[13]="lwow"
-word_stream_desc[13]="Lwów. Krajobrazy serdeczne"
+word_stream_number[13]=51
+word_stream_name[13]="pr24"
+word_stream_desc[13]="PolskieRadio24"
 
 word_stream_number[14]=52
 word_stream_name[14]="historia"
@@ -245,45 +268,57 @@ word_stream_number[18]=56
 word_stream_name[18]="angielski"
 word_stream_desc[18]="Its bitsy - English for kids"
 
-word_stream_number[19]=60
-word_stream_name[19]="zdrowiej"
-word_stream_desc[19]="Z Jedynką zdrowiej"
+word_stream_number[19]=57
+word_stream_name[19]="bezpieka"
+word_stream_desc[19]="Za kulisami bezpieki i partii"
 
-word_stream_number[20]=61
-word_stream_name[20]="drogi"
-word_stream_desc[20]="Drogi do Niepodległej - 1918"
+word_stream_number[20]=58
+word_stream_name[20]="giganci"
+word_stream_desc[20]="Giganci literatury"
 
-word_stream_number[21]=62
-word_stream_name[21]="klub_odkrywcow"
-word_stream_desc[21]="Klub odkrywców"
+word_stream_number[21]=60
+word_stream_name[21]="zdrowiej"
+word_stream_desc[21]="Z Jedynką zdrowiej"
 
-word_stream_number[22]=63
-word_stream_name[22]="spotkanie"
-word_stream_desc[22]="Spotkanie z mistrzem"
+word_stream_number[22]=61
+word_stream_name[22]="drogi"
+word_stream_desc[22]="Drogi do Niepodległej - 1918"
 
-word_stream_number[23]=64
-word_stream_name[23]="przezyjmy"
-word_stream_desc[23]="Przeżyjmy to jeszcze raz"
+word_stream_number[23]=62
+word_stream_name[23]="klub_odkrywcow"
+word_stream_desc[23]="Klub odkrywców"
 
-word_stream_number[24]=65
-word_stream_name[24]="studio_reportazu"
-word_stream_desc[24]="Studio Reportażu"
+word_stream_number[24]=63
+word_stream_name[24]="spotkanie"
+word_stream_desc[24]="Spotkanie z mistrzem"
 
-word_stream_number[25]=67
-word_stream_name[25]="zsrr"
-word_stream_desc[25]="Historia Związku Radzieckiego"
+word_stream_number[25]=64
+word_stream_name[25]="przezyjmy"
+word_stream_desc[25]="Przeżyjmy to jeszcze raz"
 
-word_stream_number[26]=68
-word_stream_name[26]="archeologia"
-word_stream_desc[26]="Archeologia"
+word_stream_number[26]=65
+word_stream_name[26]="studio_reportazu"
+word_stream_desc[26]="Studio Reportażu"
 
-word_stream_number[27]=83
-word_stream_name[27]="rok_pokoju"
-word_stream_desc[27]="1939 - Rok pokoju, rok wojny"
+word_stream_number[27]=67
+word_stream_name[27]="zsrr"
+word_stream_desc[27]="Historia Związku Radzieckiego"
 
-word_stream_number[28]=85
-word_stream_name[28]="rok_wojny"
-word_stream_desc[28]="Rok wojny, rok pokoju - 1945"
+word_stream_number[28]=68
+word_stream_name[28]="archeologia"
+word_stream_desc[28]="Archeologia"
+
+word_stream_number[29]=74
+word_stream_name[29]="rozrywka_wygnanie"
+word_stream_desc[29]="Rozrywka na wygnaniu"
+
+word_stream_number[30]=83
+word_stream_name[30]="rok_pokoju"
+word_stream_desc[30]="1939 - Rok pokoju, rok wojny"
+
+word_stream_number[31]=85
+word_stream_name[31]="rok_wojny"
+word_stream_desc[31]="Rok wojny, rok pokoju - 1945"
 
 station_name[0]="jedynka"
 station_name[1]="dwojka"
